@@ -1,0 +1,40 @@
+ALGORITHM sentencecontrol
+VAR
+    Count,words,voys : INTEGER :=0;
+    CH : STRING;
+    C : CHAR;
+    i,j,k : INTEGER;
+    N : INTEGER := CH.length;
+BEGIN
+
+//  NOMBRE DE CARACT A PART L ESPACE ET LE PT
+FOR i FROM 1 TO N STEP step  DO 
+ read(CH[i]);
+    IF (CH[i]<>'.'AND CH[i]<>' ') THEN
+    count := count + 1;
+    END_IF
+ write("The number of caracter is "count);    
+END_FOR
+
+
+// NOMBRE DE MOTS
+FOR j FROM 1 TO N STEP step  DO 
+ read(CH[j]);
+    IF (CH[j]==' ') THEN
+    words := words + 1;
+    END_IF
+ write("The number of words is " words);    
+END_FOR
+
+
+// NOMBRE DE VOYELLES
+FOR k FROM 1 TO N STEP step  DO 
+ read(CH[k]);
+ C := CH[k].toUpperCase()
+    IF (C == 'A' OR C == 'E' OR C == 'I' OR C == 'O' OR C == 'U' OR C == 'Y') THEN
+    voys := voys + 1;
+    END_IF
+ write("The number of vowels  is " voys);    
+END_FOR
+
+END
